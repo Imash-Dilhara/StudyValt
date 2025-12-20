@@ -28,6 +28,6 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public List<CourseDTO> getAllCourses(){
-        return null;
+        return List.of();
     }
 }
