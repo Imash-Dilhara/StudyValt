@@ -2,13 +2,17 @@ package lk.project.StudyVault.service.ServiceImpl;
 
 import lk.project.StudyVault.dto.UserDTO;
 import lk.project.StudyVault.service.UserService;
+import lk.project.StudyVault.util.UtilData;
 
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
     @Override
     public void addUser(UserDTO userDTO) {
-
+        userDTO.setUserId(UtilData.genarateUserId());
+        userDTO.setAccountCreatedDate(UtilData.genarateTodayDate());
+        userDTO.setAccountCreatedTime(UtilData.genarateCurrentTime());
+        System.out.print(userDTO);
     }
 
     @Override

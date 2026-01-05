@@ -2,13 +2,16 @@ package lk.project.StudyVault.service.ServiceImpl;
 
 import lk.project.StudyVault.dto.RepDTO;
 import lk.project.StudyVault.service.RepService;
+import lk.project.StudyVault.util.UtilData;
 
 import java.util.List;
 
 public class RepServiceImpl implements RepService {
     @Override
     public void addRep(RepDTO repDTO) {
-
+        repDTO.setRepId(UtilData.genarateRepId());
+        repDTO.setStartDate(UtilData.genarateTodayDate());
+        System.out.println(repDTO);
     }
 
     @Override

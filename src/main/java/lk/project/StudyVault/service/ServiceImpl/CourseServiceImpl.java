@@ -8,7 +8,8 @@ import java.util.List;
 public class CourseServiceImpl implements CourseService {
     @Override
     public void addCourse(CourseDTO courseDTO){
-
+        courseDTO.setCourseId(courseDTO.getCourseId());
+        System.out.println(courseDTO);
     }
 
     @Override

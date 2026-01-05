@@ -2,12 +2,17 @@ package lk.project.StudyVault.service.ServiceImpl;
 
 import lk.project.StudyVault.dto.NoteDTO;
 import lk.project.StudyVault.service.NoteService;
+import lk.project.StudyVault.util.UtilData;
 
 import java.util.List;
 
 public class NoteServiceImpl implements NoteService {
     @Override
     public void addNote(NoteDTO noteDTO){
+        noteDTO.setNoteId(UtilData.genarateNOteId());
+        noteDTO.setSaveDate(UtilData.genarateTodayDate());
+        noteDTO.setSaveTime(UtilData.genarateCurrentTime());
+        System.out.println(noteDTO);
 
     }
 
